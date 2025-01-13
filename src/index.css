@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(239, 199, 144);
+}
+
+img{
+    max-width: 100%;
+}
+
+.card{
+    margin-bottom: 20px;
+}
+
+.active{
+    color: rgb(230, 83, 78);
+}
+
+li{
+    list-style: none;
+}
+
+li>a{
+    color: inherit;
+    font-size: 20px;
+    text-decoration: none
+}
