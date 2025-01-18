@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import axios from 'axios'
 import { AppForm } from '../../components/AppForm';
 import { useNavigate } from 'react-router-dom';
-const apiUrl = import.meta.env.VITE_API_URL;
+import GlobalContext from '../../context/GlobalContext';
+
+
 
 const initialFormData = {
     titolo: "",
@@ -18,7 +20,7 @@ function CreatePage(){
     const [formData, setFormData] = useState(initialFormData);
     const [articles, setArticles] = useState([]);
     const navigate = useNavigate();
-    
+    const{ apiUrl} = useContext(GlobalContext)
 
      // Funzione per gestire il cambiamento del valore dell'input
       const handleInputChange = (event) => {

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 const apiUrl = import.meta.env.VITE_API_URL;
 
-export const AppCard = ({ post, onDelete }) => {
+ const AppCard = ({ post, onDelete }) => {
 
 
     return (
@@ -29,3 +29,5 @@ export const AppCard = ({ post, onDelete }) => {
         </>
     )
 }
+
+export default AppCard;
