@@ -8,6 +8,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import GlobalContext from "./context/GlobalContext";
 import { useState, useEffect} from "react";
 import axios from "axios";
+import { AlertProvider } from "./context/AlertContext";
 
 
 
@@ -73,6 +74,7 @@ const handleDelete = (idToDelete) => {
 
   return (
     <><GlobalContext.Provider value={globalProviderValue}>
+      <AlertProvider>
       <BrowserRouter>
       <Routes>
           <Route element={<AppLayout />}>
@@ -87,6 +89,7 @@ const handleDelete = (idToDelete) => {
          </Route>
         </Routes>
         </BrowserRouter >
+        </AlertProvider>
       </GlobalContext.Provider>
     </>
   );

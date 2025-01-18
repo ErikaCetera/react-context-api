@@ -5,6 +5,7 @@ import GlobalContext from "../context/GlobalContext";
 
 
 function AppFilter({ selectTag, onFilter }) {
+    
 const {tags} = useContext(GlobalContext);
     return (
         <>
